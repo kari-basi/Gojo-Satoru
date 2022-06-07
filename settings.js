@@ -35,14 +35,14 @@ global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'Done ✓',
-    admin: 'This Feature Is Only For Admin!',
-    botAdmin: 'Bot Must Be Admin First!',
-    owner: 'This Feature Is Only For Owner!',
-    group: 'Feature Used Only For Groups!',
-    private: 'Features Used Only For Private Chat!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'Wait A minute...',
+    success: 'Beres ✓',
+    admin: 'Fitur Ini Hanya Untuk Admin!',
+    botAdmin: 'Bot Harus Jadi Admin Dulu!',
+    owner: 'Fitur Ini Khusus Untuk Reiss!',
+    group: 'Fitur Ini Hanya Dapat Digunakan Pada Grup!',
+    private: 'Fitur Ini Hanya Dapat Digunakan Pada Chat Pribadi!',
+    bot: 'Fitur Ini Hanya Untuk Bot.',
+    wait: 'Tunggu Sebentar...',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
