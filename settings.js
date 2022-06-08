@@ -19,17 +19,17 @@ global.APIKeys = {
 }
 
 //customize settings\\
-global.owner = ['62895806627175']
+global.owner = ['0895806627175']
 global.premium = ['Your Number']
-global.ownernomer = '62895806627175'
+global.ownernomer = '0895806627175'
 global.ownername = 'Reiss'
-global.botname = 'Arsh Bot'
+global.botname = 'Arc-En-CieL'
 global.footer = '©LuminousTL.'
 global.ig = 'https://github.com/nexusNw'
 global.region = 'India, South India, Kerala'
 global.sc = 'https://github.com/nexusNw/Gojo-Satoru'
 global.myweb = 'https://youtube.com/channel/UCqoUjPvDdb0kjXNYdvPPpHQ'
-global.packname = 'Arsh Bot'
+global.packname = 'Arc-En-CieL'
 global.author = 'Reiss'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
