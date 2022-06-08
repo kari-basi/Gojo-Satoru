@@ -19,9 +19,9 @@ global.APIKeys = {
 }
 
 //customize settings\\
-global.owner = ['0895806627175']
+global.owner = ['62895806627175']
 global.premium = ['Your Number']
-global.ownernomer = '0895806627175'
+global.ownernomer = '62895806627175'
 global.ownername = 'Reiss'
 global.botname = 'Arc-En-CieL'
 global.footer = '©LuminousTL.'
@@ -32,7 +32,7 @@ global.myweb = 'https://www.facebook.com/ArshLoveYuri/'
 global.packname = 'Arc-En-CieL'
 global.author = 'Reiss'
 global.sessionName = 'session'
-global.prefa = ['','!','.','🐦','🐤','🗿']
+global.prefa = ['!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
     success: 'Beres ✓',
