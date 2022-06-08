@@ -25,14 +25,14 @@ global.ownernomer = '0895806627175'
 global.ownername = 'Reiss'
 global.botname = 'Arc-En-CieL'
 global.footer = '©LuminousTL.'
-global.ig = 'https://github.com/nexusNw'
-global.region = 'India, South India, Kerala'
+global.ig = 'https://trakteer.id/ryuureiss'
+global.region = 'Indonesia'
 global.sc = 'https://discord.gg/aT6ABdr3AN'
 global.myweb = 'https://www.facebook.com/ArshLoveYuri/'
 global.packname = 'Arc-En-CieL'
 global.author = 'Reiss'
 global.sessionName = 'session'
-global.prefa = ['!','.','🐦','🐤','🗿']
+global.prefa = ['!','.']
 global.sp = '⭔'
 global.mess = {
     success: 'Beres ✓',
@@ -42,7 +42,7 @@ global.mess = {
     group: 'Fitur Ini Hanya Dapat Digunakan Pada Grup!',
     private: 'Fitur Ini Hanya Dapat Digunakan Pada Chat Pribadi!',
     bot: 'Fitur Ini Hanya Untuk Bot.',
-    wait: 'Tunggu Sebentar...',
+    wait: 'Sebentar ya...',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
