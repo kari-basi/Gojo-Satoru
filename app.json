@@ -2,7 +2,7 @@
   "name": "Arc-En-CieL",
   "description": "whatsapp md bot build with nodejs",
   "repository": "https://github.com/nexusNw/Gojo-Satoru",
-  "logo": "https://telegra.ph/file/9439ecb5c426462397b12.png",
+  "logo": "https://telegra.ph/file/deab63ec85f5b03a6b4c1.png",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "buildpacks": [
     {
