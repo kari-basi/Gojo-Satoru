@@ -10,7 +10,7 @@ module.exports = {
     desc: "PDF Downloader From DoujinDesu",
     type: "animeweb",
     example: `%prefix%command url`,
-    start: async(killua, m, { text }) => {
+    start: async(GojoMdNx, m, { text }) => {
         let count = 0
         let pages = []
         const get_result = await fetchUrl(global.api("zenz", "/anime/nhentai", { query: text }, "apikey"))
@@ -35,7 +35,7 @@ module.exports = {
                 if (err) throw err
             })
         }
-        killua.sendFile(m.from, fs.readFileSync('temp/' + title + '.pdf'), `${title}.pdf`, m, { asDocument: true, thumbnail: doujin.image[0] })
+        GojoMdNx.sendFile(m.from, fs.readFileSync('temp/' + title + '.pdf'), `${title}.pdf`, m, { asDocument: true, thumbnail: doujin.image[0] })
         fs.unlinkSync('temp/' + title + '.pdf');
     },
     isQuery: true
