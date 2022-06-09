@@ -7,7 +7,7 @@ module.exports = {
     desc: "Download Media From https://twitter.com",
     type: "downloader",
     example: "%prefix%command <url>",
-    start: async(killua, m, { text }) => {
+    start: async(GojoMdNx, m, { text }) => {
         let fetch = await fetchUrl(global.api("zenz", "/downloader/twitter", { url: isUrl(text)[0] }, "apikey"))
         let caption = `*Twitter Downloader*\n\n`
         let i = fetch.result
@@ -24,7 +24,7 @@ module.exports = {
             buttons: buttons,
             headerType: 4
         }
-        killua.sendMessage(m.from, buttonMessage, { quoted: m })
+        GojoMdNx.sendMessage(m.from, buttonMessage, { quoted: m })
     },
     isQuery: true
 }
