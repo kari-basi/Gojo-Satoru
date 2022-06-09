@@ -5,7 +5,7 @@ module.exports = {
     alias: ["siapakahaku"],
     desc: "Entertaiment Siapakah Aku",
     type: "entertainment",
-    start: async(killua, m) => {
+    start: async(GojoMdNx, m) => {
         if (siapakah.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
         let fetch = await fetchUrl(global.api("zenz", "/api/siapakah", {}, "apikey"))
         let result = await fetch.result
@@ -15,7 +15,7 @@ module.exports = {
         })
         await sleep(30000)
         if (siapakah.hasOwnProperty(m.sender.split('@')[0])) {
-            killua.sendText(m.from, `Waktu Habis\n\nJawaban:  ${siapakah[m.sender.split('@')[0]]}`, m)
+            GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${siapakah[m.sender.split('@')[0]]}`, m)
             delete siapakah[m.sender.split('@')[0]]
         }
     }
