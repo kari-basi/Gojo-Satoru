@@ -3594,6 +3594,8 @@ case 'allmenu': {
 ┃╠${prefix}buy [option]
 ┃╠${prefix}sell [option]
 ┃╠═✪「 DOWNLOADER 」☯︎
+┃╠${prefix}nhpdf [url]
+┃╠${prefix}twitterdl [url]
 ┃╠${prefix}ytmp3 [url|quality]
 ┃╠${prefix}ytmp4 [url|quality]
 ┃╠${prefix}getmusic [yt link]
@@ -3602,6 +3604,8 @@ case 'allmenu': {
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
 ┃╠══✪「 SEARCHER 」 ☯︎
+┃╠${prefix}animeplanet [query]
+┃╠${prefix}nhentai [query]
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
 ┃╠${prefix}yts [query]
@@ -3661,6 +3665,7 @@ case 'allmenu': {
 ┃╠ ${prefix}cutecheck [tag]
 ┃╠ ${prefix}uglycheck [tag]
 ┃╠ ${prefix}hornycheck [tag]
+┃╠ ${prefix}checkdead [tag]
 ┃╠ ${prefix}charactercheck [tag]
 ┃╠ ${prefix}lovelycheck [tag]
 ┃╠ ${prefix}couple
@@ -3687,6 +3692,11 @@ case 'allmenu': {
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
+┃╠ ${prefix}aotak
+┃╠ ${prefix}siapakah
+┃╠ ${prefix}susunkata
+┃╠ ${prefix}tebaktebakan
+┃╠ ${prefix}tekateki
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
 ┃╠ ${prefix}math [mode]
@@ -3877,6 +3887,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}gaycheck [tag]
 ┃╠ ${prefix}cutecheck [tag]
 ┃╠ ${prefix}uglycheck [tag]
+┃╠ ${prefix}checkdead [tag]
 ┃╠ ${prefix}hornycheck [tag]
 ┃╠ ${prefix}charactercheck [tag]
 ┃╠ ${prefix}lovelycheck [tag]
@@ -3903,6 +3914,11 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
+┃╠ ${prefix}aotak
+┃╠ ${prefix}siapakah
+┃╠ ${prefix}susunkata
+┃╠ ${prefix}tebaktebakan
+┃╠ ${prefix}tekateki
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
 ┃╠ ${prefix}math [mode]
@@ -3944,6 +3960,8 @@ var unicorn = await getBuffer(picak+'Downloader Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 DOWNLOADER 」	        
+┃╠${prefix}nhpdf [url]
+┃╠${prefix}twitterdl [url]
 ┃╠${prefix}ytmp3 [url|quality]
 ┃╠${prefix}ytmp4 [url|quality]
 ┃╠${prefix}getmusic [yt link]
@@ -3958,7 +3976,9 @@ case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 SEARCHER 」	        
+┃╔══✪「 SEARCHER 」	      
+┃╠${prefix}animeplanet [query]
+┃╠${prefix}nhentai [query]
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
 ┃╠${prefix}yts [query]
