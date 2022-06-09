@@ -7,7 +7,7 @@ module.exports = {
     desc: "Search Anime From Nhentai",
     type: "animeweb",
     example: `%prefix%command 114512`,
-    start: async(killua, m, { text }) => {
+    start: async(GojoMdNx, m, { text }) => {
         try {
             let fetch = await fetchUrl(global.api("zenz", "/anime/nhentai", { query: text }, "apikey"))
             let caption = `Nhentai Search :\n\n`
@@ -27,7 +27,7 @@ module.exports = {
                 buttons: buttons,
                 headerType: 4
             }
-            killua.sendMessage(m.from, buttonMessage, { quoted: m })
+            GojoMdNx.sendMessage(m.from, buttonMessage, { quoted: m })
         } catch {
             global.mess("error", m)
         }
