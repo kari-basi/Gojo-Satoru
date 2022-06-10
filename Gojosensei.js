@@ -1187,7 +1187,7 @@ GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { qu
 GojoMdNx.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
 
 					break
-case 'can': case 'bisakah' : case 'bisa' : case 'bisa gak'
+case 'can': case 'bisakah' : case 'bisa' : case 'bisa gak' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
 					const bisa = [`Bisa`,`Tidak`,`Tidak Bisa`,`Pastinya Dong!!!`,`Gak Usah Mimpi`,`Mustahil`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
