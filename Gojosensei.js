@@ -1173,30 +1173,30 @@ Cieeee, Ada Apa Nich❤️💖👀`
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
             }
             break
-            case 'is':
+	case 'is': case 'apakah' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
-					const apa = [`Iya`, `Nggak`, `Mungkin Saja`, `Itu Benar`]
+					const apa = [`Iya`, `Nggak`, `Mungkin Saja`, `Itu Benar`, `Nggak Mungkin`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
 
 					break
-					            case 'what':
+	case 'what': case 'apa' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
-					const lel = [`Tanya Pacarmu`, `Aku Nggak Tau`, `Aku Nggak Tau, Coba Tanya Bapakmu`]
+					const lel = [`Tanya Pacarmu`, `Aku Nggak Tau`, `Aku Nggak Tau, Coba Tanya Bapakmu`, `Entahlah`]
 					const kahk = lel[Math.floor(Math.random() * lel.length)]
 GojoMdNx.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
 
 					break
-case 'can':
+case 'can': case 'bisakah' : case 'bisa' : case 'bisa gak'
 				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
-					const bisa = [`Bisa`,`Tidak`,`Tidak Bisa`,`Pastinya dong!!!`]
+					const bisa = [`Bisa`,`Tidak`,`Tidak Bisa`,`Pastinya Dong!!!`,`Gak Usah Mimpi`,`Mustahil`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
 GojoMdNx.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
 
 					break
-case 'how':
+case 'how': case 'gimana' : case 'bagaimana' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} is my face`)
-					const gimana = [`It's Okay`, `It's Difficult Bro`, `Sorry Bot Can't Answer`, `Try Searching On Google`,`Holy Cow! Really???`,`Dizzy Ah`,`Ohhh I See:(`,`The Patient, Boss:(`,`How Are You?`]
+					const gimana = [`Biasa Aja`, `Susah Ngomongnya`, `Maaf, Arsh Gak Bisa Jawab`, `Coba Cari Di Google`,`Beneran????`,`Pusing Ah`,`Ohhh Gitu Ya`]
 					const ya = gimana[Math.floor(Math.random() * gimana.length)]
 GojoMdNx.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { quoted: m })
 
@@ -1311,7 +1311,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
-case 'when':
+case 'when': case 'kapan' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} will i get married `)
 					const kapan = ['5 More Days', '10 More Days', '15 More Days','20 More Days', '25 More Days','30 More Days','35 More Days','40 More Days','45 More Days','50 More Days','55 More Days','60 More Days','65 More Days','70 More Days','75 More Days','80 More Days','85 More Days','90 More Days','100 More Days','5 Months More', '10 Months More', '15 Months More','20 Months More', '25 Months More','30 Months More','35 Months More','40 Months More','45 Months More','50 Months More','55 Months More','60 Months More','65 Months More','70 Months More','75 Months More','80 Months More','85 Months More','90 Months More','100 Months More','1 More Year','2 More Years','3 More Years','4 More Years','5 More Years','Tomorrow','The Day After Tomorrow',`After This Command, You Too ${q}`]
 					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
@@ -2262,7 +2262,7 @@ case 'webtonsearch': case 'webtoon':
                     reply(mess.error)
                 })
             break
-            case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': {
+            case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': case 'uniform' : case 'maid' : case 'kitagawa' : case 'calliope' : case 'raiden' : case 'selfies' : case 'ecchi' : case 'cosplayers' : case 'darkjokes' : {
                 reply(mess.wait)
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
             }
@@ -3594,8 +3594,6 @@ case 'allmenu': {
 ┃╠${prefix}buy [option]
 ┃╠${prefix}sell [option]
 ┃╠═✪「 DOWNLOADER 」☯︎
-┃╠${prefix}nhpdf [url]
-┃╠${prefix}twitterdl [url]
 ┃╠${prefix}ytmp3 [url|quality]
 ┃╠${prefix}ytmp4 [url|quality]
 ┃╠${prefix}getmusic [yt link]
@@ -3603,9 +3601,7 @@ case 'allmenu': {
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
-┃╠══✪「 SEARCHER 」 ☯︎
-┃╠${prefix}animeplanet [query]
-┃╠${prefix}nhentai [query]
+┃╠══✪「 SEARCHER 」 ☯︎           
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
 ┃╠${prefix}yts [query]
@@ -3624,6 +3620,9 @@ case 'allmenu': {
 ┃╠═✪「 RANDOM ANIME 」☯︎
 ┃╠${prefix}loli
 ┃╠${prefix}bully
+┃╠${prefix}trap [nsfw]
+┃╠${prefix}waifus [nsfw]
+┃╠${prefix}waifu
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
@@ -3692,11 +3691,8 @@ case 'allmenu': {
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
-┃╠ ${prefix}aotak
-┃╠ ${prefix}siapakah
-┃╠ ${prefix}susunkata
-┃╠ ${prefix}tebaktebakan
-┃╠ ${prefix}tekateki
+┃╠ ${prefix}guess blank
+┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
 ┃╠ ${prefix}math [mode]
@@ -3814,6 +3810,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}chatinfo
 ┃╠ ${prefix}quoted
 ┃╠ ${prefix}listpc
+┃╠ ${prefix}afk [reason]
 ┃╠ ${prefix}listgc
 ┃╠ ${prefix}donate
 ┃╠ ${prefix}report [bug]
@@ -3914,11 +3911,10 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
-┃╠ ${prefix}aotak
-┃╠ ${prefix}siapakah
-┃╠ ${prefix}susunkata
-┃╠ ${prefix}tebaktebakan
-┃╠ ${prefix}tekateki
+┃╠ ${prefix}guess blank
+┃╠ ${prefix}guess word
+┃╠ ${prefix}guess sentence
+┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
 ┃╠ ${prefix}math [mode]
@@ -3960,8 +3956,6 @@ var unicorn = await getBuffer(picak+'Downloader Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 DOWNLOADER 」	        
-┃╠${prefix}nhpdf [url]
-┃╠${prefix}twitterdl [url]
 ┃╠${prefix}ytmp3 [url|quality]
 ┃╠${prefix}ytmp4 [url|quality]
 ┃╠${prefix}getmusic [yt link]
@@ -3977,8 +3971,9 @@ var unicorn = await getBuffer(picak+'Search Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 SEARCHER 」	      
-┃╠${prefix}animeplanet [query]
-┃╠${prefix}nhentai [query]
+┃╠${prefix}animexxx [query]
+┃╠${prefix}characterxxx [query]
+┃╠${prefix}manga [query]
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
 ┃╠${prefix}yts [query]
@@ -4011,6 +4006,24 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔✪「 RANDOM ANIME 」	        
 ┃╠${prefix}loli
 ┃╠${prefix}bully
+┃╠${prefix}trap [nsfw]
+┃╠${prefix}waifus [nsfw]
+┃╠${prefix}nekos [nsfw]
+┃╠${prefix}ecchi [nsfw]
+┃╠${prefix}waifu
+┃╠${prefix}neko
+┃╠${prefix}megumin
+┃╠${prefix}shinobu
+┃╠${prefix}husbu
+┃╠${prefix}neko
+┃╠${prefix}uniform
+┃╠${prefix}maid
+┃╠${prefix}kitagawa
+┃╠${prefix}raiden
+┃╠${prefix}cosplayers
+┃╠${prefix}darkjokes
+┃╠${prefix}selfies
+┃╠${prefix}calliope
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
@@ -4085,6 +4098,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔══✪「 CONVERTER 」	        
 ┃╠ ${prefix}toimage [reply stick]
 ┃╠ ${prefix}sticker [reply img|gif]
+┃╠ ${prefix}removebgxxx
 ┃╠ ${prefix}emojimix [moji+moji]
 ┃╠ ${prefix}tovideo [reply img]
 ┃╠ ${prefix}togif [reply stick]
