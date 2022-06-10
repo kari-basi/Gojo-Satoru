@@ -2291,7 +2291,7 @@ case 'webtonsearch': case 'webtoon':
                     reply(mess.error)
                 })
             break
-            case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': case 'uniform' : case 'maid' : case 'kitagawa' : case 'calliope' : case 'raiden' : case 'selfies' : case 'ecchi' : case 'cosplayers' : case 'darkjokes' : {
+            case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': case 'uniform' : case 'maid' : case 'marin-kitagawa' : case 'mori-calliope' : case 'raiden-shogun' : case 'selfies' : case 'ecchi' : case 'cosplay' : case 'darkjoke' : {
                 reply(mess.wait)
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
             }
@@ -3679,12 +3679,12 @@ case 'allmenu': {
 ┃╠${prefix}neko
 ┃╠${prefix}uniform
 ┃╠${prefix}maid
-┃╠${prefix}kitagawa
-┃╠${prefix}raiden
-┃╠${prefix}cosplayers
-┃╠${prefix}darkjokes
+┃╠${prefix}marin-kitagawa
+┃╠${prefix}raiden-shogun
+┃╠${prefix}cosplay
+┃╠${prefix}darkjoke
 ┃╠${prefix}selfies
-┃╠${prefix}calliope
+┃╠${prefix}mori-calliope
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
@@ -4105,12 +4105,12 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}neko
 ┃╠${prefix}uniform
 ┃╠${prefix}maid
-┃╠${prefix}kitagawa
-┃╠${prefix}raiden
-┃╠${prefix}cosplayers
-┃╠${prefix}darkjokes
+┃╠${prefix}marin-kitagawa
+┃╠${prefix}raiden-shogun
+┃╠${prefix}cosplay
+┃╠${prefix}darkjoke
 ┃╠${prefix}selfies
-┃╠${prefix}calliope
+┃╠${prefix}mori-calliope
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
