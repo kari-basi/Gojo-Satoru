@@ -1184,8 +1184,8 @@ GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { qu
 	case 'apakah' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
 					const apakah = [`Iya`, `Nggak`, `Mungkin Saja`, `Itu Benar`, `Nggak Mungkin`]
-					const yah = apakah[Math.floor(Math.random() * yah.length)]
-GojoMdNx.sendMessage(from, { text: `Question : Apakah ${q}\nAnswer : ${kah}` }, { quoted: m })
+					const yah = apakah[Math.floor(Math.random() * apakah.length)]
+GojoMdNx.sendMessage(from, { text: `Question : Apakah ${q}\nAnswer : ${yah}` }, { quoted: m })
 
 					break
 	case 'what':
@@ -1198,15 +1198,15 @@ GojoMdNx.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, {
 	case 'apa' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
 					const lal = [`Tanya Pacarmu`, `Aku Nggak Tau`, `Aku Nggak Tau, Coba Tanya Bapakmu`, `Entahlah`]
-					const yey = lel[Math.floor(Math.random() * yey.length)]
-GojoMdNx.sendMessage(from, { text: `Question : Apa ${q}\nAnswer : ${kahk}` }, { quoted: m })
+					const yey = lal[Math.floor(Math.random() * lal.length)]
+GojoMdNx.sendMessage(from, { text: `Question : Apa ${q}\nAnswer : ${yey}` }, { quoted: m })
 
 					break
 	case 'can':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
 					const can = [`Can`,`Can't`,`Cannot`,`Of Course You Can!!!`]
-					const cant = can[Math.floor(Math.random() * cant.length)]
-GojoMdNx.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
+					const cant = can[Math.floor(Math.random() * can.length)]
+GojoMdNx.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${cant}` }, { quoted: m })
 
 					break
        case 'bisa gak' :
@@ -1220,7 +1220,7 @@ GojoMdNx.sendMessage(from, { text: `Question : Bisa gak ${q}\nAnswer : ${ga}` },
 				if (!text) return replay(`Use Text, Example : ${prefix + command} is my face`)
 					const how = [`It's Okay`, `It's Difficult Bro`, `Sorry Bot Can't Answer`, `Try Searching On Google`,`Holy Cow! Really???`,`Dizzy Ah`,`Ohhh I See`]
 					const hwoh = how[Math.floor(Math.random() * hwoh.length)]
-GojoMdNx.sendMessage(from, { text: `Question : How ${q}\nAnswer : ${ya}` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `Question : How ${q}\nAnswer : ${hwoh}` }, { quoted: m })
 
 					break
        case 'gimana' :
@@ -1340,16 +1340,10 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
-case 'when':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} will i get married `)
-					const when = ['5 More Days', '10 More Days', '15 More Days','20 More Days', '25 More Days','30 More Days','35 More Days','40 More Days','45 More Days','50 More Days','55 More Days','60 More Days','65 More Days','70 More Days','75 More Days','80 More Days','85 More Days','90 More Days','100 More Days','5 Months More', '10 Months More', '15 Months More','20 Months More', '25 Months More','30 Months More','35 Months More','40 Months More','45 Months More','50 Months More','55 Months More','60 Months More','65 Months More','70 Months More','75 Months More','80 Months More','85 Months More','90 Months More','100 Months More','1 More Year','2 More Years','3 More Years','4 More Years','5 More Years','Tomorrow','The Day After Tomorrow','After This Command']
-					const wehn = when[Math.floor(Math.random() * wehn.length)]
-GojoMdNx.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
-					break
 case 'kapan': case 'kapankah' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} will i get married `)
-					const kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Bulan Lagi','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Sesudah Hari Esok','Setelah Pesan Ini`]
-					const kapan = kapan[Math.floor(Math.random() * kapan.length)]
+					const kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Bulan Lagi','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Setelah Hari Esok','Setelah Pesan Ini']
+					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
 GojoMdNx.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
 					break
 case 'wangy':
