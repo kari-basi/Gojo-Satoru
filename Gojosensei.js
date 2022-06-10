@@ -3712,7 +3712,6 @@ case 'allmenu': {
 ┃╠${prefix}cringe
 ┃╠══✪「 FUN 」 ☯︎
 ┃╠ ${prefix}how [text
-┃╠ ${prefix}when [text]
 ┃╠ ${prefix}is [text]
 ┃╠ ${prefix}what [text]
 ┃╠ ${prefix}can [text]
@@ -3941,7 +3940,6 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 FUN 」	        
 ┃╠ ${prefix}how [text
-┃╠ ${prefix}when [text]
 ┃╠ ${prefix}is [text]
 ┃╠ ${prefix}what [text]
 ┃╠ ${prefix}can [text]
