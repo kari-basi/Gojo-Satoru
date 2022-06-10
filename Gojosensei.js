@@ -2341,8 +2341,8 @@ case 'webtonsearch': case 'webtoon':
                 GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	        case 'motivasi': case 'motivationalquote': case 'bucinquote': case 'katasenja': case 'puisi': {
-                let anu = await fetchJson(api('zenz', '/api/'+command, {}, 'apikey'))
+	        case 'motivasi': case 'motivationalquote': case 'bucinquote': case 'katasenja': case 'puisi': case 'cerpen' : case 'cersex' : case 'creepyfact' : {
+                let anu = await fetchJson(api('zenz', '/api/random/'+command, {}, 'apikey'))
                 let buttons = [
                     {buttonId: `motivasi`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
                 ]
@@ -3548,6 +3548,7 @@ case 'allmenu': {
 ┃╠ ${prefix}delete
 ┃╠ ${prefix}chatinfo
 ┃╠ ${prefix}quoted
+┃╠ ${prefix}afk [reason]
 ┃╠ ${prefix}listpc
 ┃╠ ${prefix}listgc
 ┃╠ ${prefix}donate
@@ -3601,7 +3602,16 @@ case 'allmenu': {
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
-┃╠══✪「 SEARCHER 」 ☯︎           
+┃╠${prefix}instagramx [url]
+┃╠${prefix}tiktokd [url]
+┃╠${prefix}twitdlx [url]
+┃╠${prefix}twittermp3x [url]
+┃╠${prefix}fbdlx [url]
+┃╠${prefix}hadisxxx [query]
+┃╠══✪「 SEARCHER 」 ☯︎       
+┃╠${prefix}animexxx [query]
+┃╠${prefix}characterxxx [query]
+┃╠${prefix}manga [query]
 ┃╠${prefix}play [query]
 ┃╠${prefix}song [query]
 ┃╠${prefix}yts [query]
@@ -3617,12 +3627,35 @@ case 'allmenu': {
 ┃╠${prefix}coffee
 ┃╠${prefix}animequote (indo)
 ┃╠${prefix}couplepp
+┃╠${prefix}motivasi
+┃╠${prefix}motivationalquote
+┃╠${prefix}bucinquote
+┃╠${prefix}katasenja
+┃╠${prefix}puisi
+┃╠${prefix}cerpen
+┃╠${prefix}cersex
+┃╠${prefix}creepyfact
 ┃╠═✪「 RANDOM ANIME 」☯︎
 ┃╠${prefix}loli
 ┃╠${prefix}bully
 ┃╠${prefix}trap [nsfw]
 ┃╠${prefix}waifus [nsfw]
+┃╠${prefix}nekos [nsfw]
+┃╠${prefix}ecchi [nsfw]
 ┃╠${prefix}waifu
+┃╠${prefix}neko
+┃╠${prefix}megumin
+┃╠${prefix}shinobu
+┃╠${prefix}husbu
+┃╠${prefix}neko
+┃╠${prefix}uniform
+┃╠${prefix}maid
+┃╠${prefix}kitagawa
+┃╠${prefix}raiden
+┃╠${prefix}cosplayers
+┃╠${prefix}darkjokes
+┃╠${prefix}selfies
+┃╠${prefix}calliope
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
@@ -3692,6 +3725,8 @@ case 'allmenu': {
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
 ┃╠ ${prefix}guess blank
+┃╠ ${prefix}guess sentence
+┃╠ ${prefix}guess word
 ┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
@@ -3700,6 +3735,7 @@ case 'allmenu': {
 ┃╠═══✪「 CONVERTER 」 ☯︎
 ┃╠ ${prefix}toimage [reply stick]
 ┃╠ ${prefix}sticker [reply img|gif]
+┃╠ ${prefix}removebgxxx [reply img]
 ┃╠ ${prefix}emojimix [moji+moji]
 ┃╠ ${prefix}tovideo [reply img]
 ┃╠ ${prefix}togif [reply stick]
@@ -3963,6 +3999,12 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
+┃╠${prefix}instagramx [url]
+┃╠${prefix}tiktokd [url]
+┃╠${prefix}twitdlx [url]
+┃╠${prefix}twittermp3x [url]
+┃╠${prefix}fbdlx [url]
+┃╠${prefix}hadisxxx [query]
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Fanspage Luminous📍","url": `${myweb}`}},{"urlButton": {"displayText": "Discord Luminous🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
@@ -3996,6 +4038,14 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}coffee
 ┃╠${prefix}animequote (indo)
 ┃╠${prefix}couplepp
+┃╠${prefix}motivasi
+┃╠${prefix}motivationalquote
+┃╠${prefix}bucinquote
+┃╠${prefix}katasenja
+┃╠${prefix}puisi
+┃╠${prefix}cerpen
+┃╠${prefix}cersex
+┃╠${prefix}creepyfact
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Fanspage Luminous📍","url": `${myweb}`}},{"urlButton": {"displayText": "Discord Luminous🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
@@ -4098,7 +4148,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔══✪「 CONVERTER 」	        
 ┃╠ ${prefix}toimage [reply stick]
 ┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}removebgxxx
+┃╠ ${prefix}removebgxxx [reply img]
 ┃╠ ${prefix}emojimix [moji+moji]
 ┃╠ ${prefix}tovideo [reply img]
 ┃╠ ${prefix}togif [reply stick]
