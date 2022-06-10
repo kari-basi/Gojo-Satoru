@@ -1184,7 +1184,7 @@ GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { qu
 	case 'apakah' :
 				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
 					const apakah = [`Iya`, `Nggak`, `Mungkin Saja`, `Itu Benar`, `Nggak Mungkin`]
-					const kah = apakah[Math.floor(Math.random() * apakah.length)]
+					const yah = apakah[Math.floor(Math.random() * yah.length)]
 GojoMdNx.sendMessage(from, { text: `Question : Apakah ${q}\nAnswer : ${kah}` }, { quoted: m })
 
 					break
