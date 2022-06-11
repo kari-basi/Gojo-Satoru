@@ -2293,7 +2293,12 @@ case 'webtonsearch': case 'webtoon':
             break
             case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': case 'uniform' : case 'maid' : case 'marin-kitagawa' : case 'mori-calliope' : case 'raiden-shogun' : case 'selfies' : case 'ecchi' : case 'cosplay' : case 'darkjoke' : {
                 reply(mess.wait)
-                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
+            }
+            break
+	    case 'yuri': case 'tomori': case 'rem': case 'nishimiya': case 'nezuko': case 'natsukawa': case 'miku': case 'mikasa': case 'kurumi': case 'kuriyama' : case 'emilia' : case 'elaina' : {
+                reply(mess.wait)
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/v2/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
             }
             break
 	    case 'couplepp':  case 'ppcouple': {
@@ -3665,8 +3670,6 @@ case 'allmenu': {
 ┃╠${prefix}cersex
 ┃╠${prefix}creepyfact
 ┃╠═✪「 RANDOM ANIME 」☯︎
-┃╠${prefix}loli
-┃╠${prefix}bully
 ┃╠${prefix}trap [nsfw]
 ┃╠${prefix}waifus [nsfw]
 ┃╠${prefix}nekos [nsfw]
@@ -3685,6 +3688,18 @@ case 'allmenu': {
 ┃╠${prefix}darkjoke
 ┃╠${prefix}selfies
 ┃╠${prefix}mori-calliope
+┃╠${prefix}elaina
+┃╠${prefix}emilia
+┃╠${prefix}kuriyama
+┃╠${prefix}kurumi
+┃╠${prefix}mikasa
+┃╠${prefix}miku
+┃╠${prefix}nezuko
+┃╠${prefix}rem
+┃╠${prefix}tomori
+┃╠${prefix}yuri
+┃╠${prefix}loli
+┃╠${prefix}bully
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
@@ -4091,8 +4106,6 @@ var unicorn = await getBuffer(picak+'Random Anime Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔✪「 RANDOM ANIME 」	        
-┃╠${prefix}loli
-┃╠${prefix}bully
 ┃╠${prefix}trap [nsfw]
 ┃╠${prefix}waifus [nsfw]
 ┃╠${prefix}nekos [nsfw]
@@ -4111,6 +4124,18 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}darkjoke
 ┃╠${prefix}selfies
 ┃╠${prefix}mori-calliope
+┃╠${prefix}elaina
+┃╠${prefix}emilia
+┃╠${prefix}kuriyama
+┃╠${prefix}kurumi
+┃╠${prefix}mikasa
+┃╠${prefix}miku
+┃╠${prefix}nezuko
+┃╠${prefix}rem
+┃╠${prefix}tomori
+┃╠${prefix}yuri
+┃╠${prefix}loli
+┃╠${prefix}bully
 ┃╠${prefix}cuddle
 ┃╠${prefix}cry
 ┃╠${prefix}hug
