@@ -2291,7 +2291,7 @@ case 'webtonsearch': case 'webtoon':
                     reply(mess.error)
                 })
             break
-            case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': case 'uniform' : case 'maid' : case 'marin-kitagawa' : case 'mori-calliope' : case 'raiden-shogun' : case 'selfies' : case 'ecchi' : case 'cosplay' : case 'darkjoke' : {
+            case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': case 'waifus': case 'nekos': case 'trap': case 'blowjob': case 'uniform' : case 'maid' : case 'marin-kitagawa' : case 'mori-calliope' : case 'raiden-shogun' : case 'selfies' : case 'ecchi' : {
                 reply(mess.wait)
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
             }
@@ -2299,6 +2299,11 @@ case 'webtonsearch': case 'webtoon':
 	    case 'yuri': case 'tomori': case 'rem': case 'nishimiya': case 'nezuko': case 'natsukawa': case 'miku': case 'mikasa': case 'kurumi': case 'kuriyama' : case 'emilia' : case 'elaina' : {
                 reply(mess.wait)
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/v2/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
+            }
+            break
+	    case 'cosplay': case 'darkjoke': {
+                reply(mess.wait)
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomimage/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
             }
             break
 	    case 'couplepp':  case 'ppcouple': {
