@@ -2375,8 +2375,8 @@ case 'webtonsearch': case 'webtoon':
                 GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	        case 'motivasi': case 'motivationalquote': case 'bucinquote': case 'katasenja': case 'puisi': case 'cerpen' : case 'cersex' : case 'creepyfact' : {
-                let anu = await fetchJson(api('zenz', '/api/random/'+command, {}, 'apikey'))
+	        case 'motivasi': case 'motivationalquote': case 'bucinquote': case 'katasenja': case 'puisi': case 'cerpen' : case 'cersex' : case 'creepyfact' : case 'faktaunik' : {
+                let anu = await fetchJson(api('zenz', '/api/randomteks/'+command, {}, 'apikey'))
                 let buttons = [
                     {buttonId: `motivasi`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
                 ]
@@ -3669,6 +3669,7 @@ case 'allmenu': {
 ┃╠${prefix}cerpen
 ┃╠${prefix}cersex
 ┃╠${prefix}creepyfact
+┃╠${prefix}faktaunik
 ┃╠═✪「 RANDOM ANIME 」☯︎
 ┃╠${prefix}trap [nsfw]
 ┃╠${prefix}waifus [nsfw]
@@ -4098,6 +4099,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}cerpen
 ┃╠${prefix}cersex
 ┃╠${prefix}creepyfact
+┃╠${prefix}faktaunik
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Fanspage Luminous📍","url": `${myweb}`}},{"urlButton": {"displayText": "Discord Luminous🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
