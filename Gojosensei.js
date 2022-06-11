@@ -2386,7 +2386,7 @@ case 'webtonsearch': case 'webtoon':
                     {buttonId: `motivasi`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
                 ]
                 let buttonMessage = {
-                    text: 'anu.result.command'
+                    text: `'${result.command}', ${result.up_at}`,
                     footer: 'Press The Button Below',
                     buttons: buttons,
                     headerType: 2
