@@ -3777,6 +3777,7 @@ case 'allmenu': {
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
+┃╠${prefix}nhpdf [url]
 ┃╠${prefix}instagramx [url]
 ┃╠${prefix}tiktokd [url]
 ┃╠${prefix}twitdlx [url]
@@ -3792,6 +3793,7 @@ case 'allmenu': {
 ┃╠${prefix}yts [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
+┃╠${prefix}nhentai [query]
 ┃╠${prefix}pinterest [query]
 ┃╠${prefix}wallpaper [query]
 ┃╠${prefix}wikimedia [query]
@@ -3914,9 +3916,9 @@ case 'allmenu': {
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
-┃╠ ${prefix}guess blank
-┃╠ ${prefix}guess sentence
-┃╠ ${prefix}guess word
+┃╠ ${prefix}siapakah
+┃╠ ${prefix}tekateki
+┃╠ ${prefix}asahotak
 ┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
@@ -4141,9 +4143,9 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
-┃╠ ${prefix}guess blank
-┃╠ ${prefix}guess word
-┃╠ ${prefix}guess sentence
+┃╠ ${prefix}siapakah
+┃╠ ${prefix}tekateki
+┃╠ ${prefix}asahotak
 ┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
@@ -4193,6 +4195,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
+┃╠${prefix}nhpdf [url]
 ┃╠${prefix}instagramx [url]
 ┃╠${prefix}tiktokd [url]
 ┃╠${prefix}twitdlx [url]
@@ -4215,6 +4218,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}yts [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
+┃╠${prefix}nhentai [query]
 ┃╠${prefix}pinterest [query]
 ┃╠${prefix}wallpaper [query]
 ┃╠${prefix}wikimedia [query]
