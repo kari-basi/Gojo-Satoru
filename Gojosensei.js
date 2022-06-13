@@ -113,6 +113,9 @@ let imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
 let videox = JSON.parse(fs.readFileSync('./database/video.json'))
 
 //read database\\
+let siapakah = db.data.game.siapakah = []
+let asahotak = db.data.game.asahotak = []
+let tekateki = db.data.gane.asahotak = []
 let tebaklagu = db.data.game.tebaklagu = []
 let _family100 = db.data.game.family100 = []
 let kuismath = db.data.game.math = []
@@ -129,7 +132,7 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
-        var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
+        var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : Function.checkPrefix(prefa, body).prefix ?? "!"
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -341,8 +344,36 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
+		
         }
-
+	    
+ 	if (asahotak.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+                jawaban = asahotak[m.sender.split('@')[0]]
+                if (budy.toLowerCase() == jawaban) {
+                    await GojoMdNx.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'asahotak', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+                    delete asahotak[m.sender.split('@')[0]]
+                } else m.reply('*Jawaban Salah!*')
+		
+            }
+	    
+	if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+                jawaban = tekateki[m.sender.split('@')[0]]
+                if (budy.toLowerCase() == jawaban) {
+                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'tekateki', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+                    delete tekateki[m.sender.split('@')[0]]
+                } else m.reply('*Jawaban Salah!*')
+		
+            }
+	    
+        if (siapakah.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+                jawaban = siapakah[m.sender.split('@')[0]]
+                if (budy.toLowerCase() == jawaban) {
+                    await GojoMdNx.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'siapakah', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+                    delete siapakah[m.sender.split('@')[0]]
+                } else m.reply('*Jawaban Salah!*')
+		
+            }
+	    
         if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
@@ -2386,7 +2417,7 @@ case 'webtonsearch': case 'webtoon':
                     {buttonId: `motivasi`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
                 ]
                 let buttonMessage = {
-                    text: `'${result.command}', ${result.up_at}`,
+                    text: `anu.${result}.message`
                     footer: 'Press The Button Below',
                     buttons: buttons,
                     headerType: 2
