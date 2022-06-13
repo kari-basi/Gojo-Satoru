@@ -1822,7 +1822,7 @@ break
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'FP Luminous📍',
+                                    displayText: 'Fanspage Luminous📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -1836,7 +1836,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 ARSH AKTIF🎉 」\n\n${text}`
+                      let txt = `「 Pemberitahuan🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -1870,7 +1870,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 ARHS AKTIF 🎉」\n\n${text}`
+                      let txt = `「 Pemberitahuan 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('Broadcast Success')
