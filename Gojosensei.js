@@ -129,7 +129,7 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
-        var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? "!"
+        var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : prefa "!"
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -2298,12 +2298,12 @@ case 'webtonsearch': case 'webtoon':
             break
 	    case 'ahegao': case 'ass': case 'bdsm': case 'blowjob': case 'cuckold': case 'cum': case 'femdom': case 'foot': case 'glasses': case 'hentaigif' : case 'manga' : case 'masturbation' : case 'orgy' : case 'mobilewall' : case 'netorare' : case 'panties' : case 'pussy' : case 'tentacles' : {
                 reply(mess.wait)
-                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/morensfw/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/morensfw/'+command, {}, 'apikey') }, caption: 'Buat Si Horny Nih Foto Random ' + command }, { quoted: m })
             }
             break
 	    case 'yuri': case 'tomori': case 'rem': case 'nishimiya': case 'nezuko': case 'natsukawa': case 'miku': case 'mikasa': case 'kurumi': case 'kuriyama' : case 'emilia' : case 'elaina' : {
                 reply(mess.wait)
-                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/v2/'+command, {}, 'apikey') }, caption: 'Buat si horny nih foto random ' + command }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/v2/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
             }
             break
 	    case 'cosplay': case 'darkjoke': {
