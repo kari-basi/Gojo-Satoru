@@ -1805,7 +1805,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 ARSH AKTIF🎉 」\n\n${text}`
+                      let txt = `「 Pemberitahuan🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -1839,7 +1839,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 ARHS AKTIF 🎉」\n\n${text}`
+                      let txt = `「 Pemberitahuan 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('Broadcast Success')
@@ -2298,7 +2298,7 @@ case 'webtonsearch': case 'webtoon':
             break
 	    case 'ahegao': case 'ass': case 'bdsm': case 'blowjob': case 'cuckold': case 'cum': case 'femdom': case 'foot': case 'glasses': case 'hentaigif' : case 'manga' : case 'masturbation' : case 'orgy' : case 'mobilewall' : case 'netorare' : case 'panties' : case 'pussy' : case 'tentacles' : {
                 reply(mess.wait)
-                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/morensfw/'+command, {}, 'apikey') }, caption: 'Buat Si Horny Nih Foto Random ' + command }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/morensfw/'+command, {}, 'apikey') }, caption: 'Buat Si Horny Nih Foto Random ' + command }, { quoted: m })
             }
             break
 	    case 'yuri': case 'tomori': case 'rem': case 'nishimiya': case 'nezuko': case 'natsukawa': case 'miku': case 'mikasa': case 'kurumi': case 'kuriyama' : case 'emilia' : case 'elaina' : {
