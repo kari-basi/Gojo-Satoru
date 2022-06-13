@@ -3501,8 +3501,13 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 											"title": "Random Menu",
 										"description": "Displays The List Of Random Features",
 										"rowId": `${prefix}randommenu`
-										},
-										{
+									},
+									{
+											"title": "Random NSWF",
+										"description": "Displays The List Of Random NSFW Features",
+										"rowId": `${prefix}randomnsfwmenu`
+									},
+									{
 											"title": "Random Anime Menu",
 										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}randomanimemenu`
@@ -4132,15 +4137,42 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Fanspage Luminous📍","url": `${myweb}`}},{"urlButton": {"displayText": "Discord Luminous🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
+case 'randomnsfwmenu':
+var unicorn = await getBuffer(picak+'Random NSFW')
+await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
+┏━「 ${botname} 」━━⭓ 
+┃╔══✪「 RANDOM NSWF 」	        
+┃╠${prefix}trap [nsfw]
+┃╠${prefix}waifus [nsfw]
+┃╠${prefix}nekos [nsfw]
+┃╠${prefix}ecchi [nsfw]
+┃╠${prefix}ahegao [nsfw]
+┃╠${prefix}ass [nsfw]
+┃╠${prefix}bdsm [nsfw]
+┃╠${prefix}blowjob [nsfw]
+┃╠${prefix}cuckold [nsfw]
+┃╠${prefix}cum [nsfw]
+┃╠${prefix}femdom [nsfw]
+┃╠${prefix}foot [nsfw]
+┃╠${prefix}glasses [nsfw]
+┃╠${prefix}hentaigif [nsfw]
+┃╠${prefix}manga [nsfw]
+┃╠${prefix}masturbation [nsfw]
+┃╠${prefix}orgy [nsfw]
+┃╠${prefix}mobilewall [nsfw]
+┃╠${prefix}netorare [nsfw]
+┃╠${prefix}panties [nsfw]
+┃╠${prefix}pussy [nsfw]
+┃╠${prefix}tentacles [nsfw]
+┃╠${prefix}yuri [nsfw]
+┃╚═════════════✪
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "Fanspage Luminous📍","url": `${myweb}`}},{"urlButton": {"displayText": "Discord Luminous🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+break
 case 'randomanimemenu':
 var unicorn = await getBuffer(picak+'Random Anime Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔✪「 RANDOM ANIME 」	        
-┃╠${prefix}trap [nsfw]
-┃╠${prefix}waifus [nsfw]
-┃╠${prefix}nekos [nsfw]
-┃╠${prefix}ecchi [nsfw]
 ┃╠${prefix}waifu
 ┃╠${prefix}neko
 ┃╠${prefix}megumin
@@ -4164,7 +4196,6 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}nezuko
 ┃╠${prefix}rem
 ┃╠${prefix}tomori
-┃╠${prefix}yuri
 ┃╠${prefix}loli
 ┃╠${prefix}bully
 ┃╠${prefix}cuddle
