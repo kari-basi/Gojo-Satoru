@@ -43,7 +43,7 @@ global.mess = {
     private: 'Fitur Ini Hanya Dapat Digunakan Pada Chat Pribadi!',
     bot: 'Fitur Ini Hanya Untuk Bot.',
     wait: 'Sebentar ya...',
-    error: 'Error! Maybe Api Key Is Expired🤔!',
+    error: 'Error! Mungkin Api Key nya Udah Habis🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
     global.limitawal = {
