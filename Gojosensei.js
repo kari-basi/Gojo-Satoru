@@ -3084,7 +3084,7 @@ ${id}`)
         	     } catch {
             	         global.mess("error", m)
      		     }
-   		 },
+   		 }
    		 isQuery: true
 	    }
 	break
@@ -3116,7 +3116,7 @@ ${id}`)
         }
         GojoMdNx.sendFile(m.from, fs.readFileSync('temp/' + title + '.pdf'), `${title}.pdf`, m, { asDocument: true, thumbnail: doujin.image[0] })
         fs.unlinkSync('temp/' + title + '.pdf');
-    },
+    }
     isQuery: true
 }
 		break
