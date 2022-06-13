@@ -1036,6 +1036,51 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
+	    case 'asahotak' : {
+		if (asahotak.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
+        	let fetch = await fetchUrl(global.api("zenz", "/entertainment/asahotak", {}, "apikey"))
+        	let result = await fetch.result
+        	GojoMdNx.sendText(m.from, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\n\nWaktu : 30s`, m).then(() => {
+            	asahotak[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+            	console.log("Jawaban: " + result.jawaban)
+        	})
+        	await sleep(30000)
+        	if (asahotak.hasOwnProperty(m.sender.split('@')[0])) {
+            	GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${asahotak[m.sender.split('@')[0]]}`, m)
+            	delete asahotak[m.sender.split('@')[0]]
+                }
+	    }
+	    break
+	    case 'tekateki' : {
+		if (tekateki.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
+        	let fetch = await fetchUrl(global.api("zenz", "/entertainment/tekateki", {}, "apikey"))
+        	let result = await fetch.result
+        	GojoMdNx.sendText(m.from, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\n\nWaktu : 30s`, m).then(() => {
+            	tekateki[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+            	console.log("Jawaban: " + result.jawaban)
+        	})
+        	await sleep(30000)
+        	if (tekateki.hasOwnProperty(m.sender.split('@')[0])) {
+            	GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${tekateki[m.sender.split('@')[0]]}`, m)
+            	delete tekateki[m.sender.split('@')[0]]
+        	}
+            }
+	    break
+	    case 'siapakah' : {
+		if (siapakah.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
+        	let fetch = await fetchUrl(global.api("zenz", "/entertainment/siapakah", {}, "apikey"))
+        	let result = await fetch.result
+        	GojoMdNx.sendText(m.from, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\n\nWaktu : 30s`, m).then(() => {
+            	siapakah[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+            	console.log("Jawaban: " + result.jawaban)
+        	})
+        	await sleep(30000)
+        	if (siapakah.hasOwnProperty(m.sender.split('@')[0])) {
+            	GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${siapakah[m.sender.split('@')[0]]}`, m)
+            	delete siapakah[m.sender.split('@')[0]]
+        	}
+    	    }
+	    break
 	    case 'family100': {
                 if ('family100'+m.chat in _family100) {
                     reply('There Are Still Unfinished Sessions!')
