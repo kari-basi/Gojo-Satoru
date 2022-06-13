@@ -113,9 +113,6 @@ let imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
 let videox = JSON.parse(fs.readFileSync('./database/video.json'))
 
 //read database\\
-let siapakah = db.data.game.siapakah = []
-let asahotak = db.data.game.asahotak = []
-let tekateki = db.data.gane.asahotak = []
 let tebaklagu = db.data.game.tebaklagu = []
 let _family100 = db.data.game.family100 = []
 let kuismath = db.data.game.math = []
@@ -344,36 +341,8 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
-		
         }
-	    
- 	if (asahotak.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = asahotak[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await GojoMdNx.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'asahotak', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete asahotak[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-		
-            }
-	    
-	if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tekateki[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await GojoMdNx.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'tekateki', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tekateki[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-		
-            }
-	    
-        if (siapakah.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = siapakah[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await GojoMdNx.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'siapakah', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete siapakah[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-		
-            }
-	    
+
         if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
@@ -1036,51 +1005,6 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-	    case 'asahotak' : {
-		if (asahotak.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
-        	let fetch = await fetchUrl(global.api("zenz", "/entertainment/asahotak", {}, "apikey"))
-        	let result = await fetch.result
-        	GojoMdNx.sendText(m.from, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\n\nWaktu : 30s`, m).then(() => {
-            	asahotak[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-            	console.log("Jawaban: " + result.jawaban)
-        	})
-        	await sleep(30000)
-        	if (asahotak.hasOwnProperty(m.sender.split('@')[0])) {
-            	GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${asahotak[m.sender.split('@')[0]]}`, m)
-            	delete asahotak[m.sender.split('@')[0]]
-                }
-	    }
-	    break
-	    case 'tekateki' : {
-		if (tekateki.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
-        	let fetch = await fetchUrl(global.api("zenz", "/entertainment/tekateki", {}, "apikey"))
-        	let result = await fetch.result
-        	GojoMdNx.sendText(m.from, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\n\nWaktu : 30s`, m).then(() => {
-            	tekateki[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-            	console.log("Jawaban: " + result.jawaban)
-        	})
-        	await sleep(30000)
-        	if (tekateki.hasOwnProperty(m.sender.split('@')[0])) {
-            	GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${tekateki[m.sender.split('@')[0]]}`, m)
-            	delete tekateki[m.sender.split('@')[0]]
-        	}
-            }
-	    break
-	    case 'siapakah' : {
-		if (siapakah.hasOwnProperty(m.sender.split('@')[0])) return m.reply("Masih Ada Sesi Yang Belum Diselesaikan!")
-        	let fetch = await fetchUrl(global.api("zenz", "/entertainment/siapakah", {}, "apikey"))
-        	let result = await fetch.result
-        	GojoMdNx.sendText(m.from, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\n\nWaktu : 30s`, m).then(() => {
-            	siapakah[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-            	console.log("Jawaban: " + result.jawaban)
-        	})
-        	await sleep(30000)
-        	if (siapakah.hasOwnProperty(m.sender.split('@')[0])) {
-            	GojoMdNx.sendText(m.from, `Waktu Habis\n\nJawaban:  ${siapakah[m.sender.split('@')[0]]}`, m)
-            	delete siapakah[m.sender.split('@')[0]]
-        	}
-    	    }
-	    break
 	    case 'family100': {
                 if ('family100'+m.chat in _family100) {
                     reply('There Are Still Unfinished Sessions!')
@@ -1867,7 +1791,7 @@ break
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'Fanspage Luminous📍',
+                                    displayText: 'FP Luminous📍',
                                     url: `${myweb}`
                                 }
                             }, {
@@ -1881,7 +1805,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 Pemberitahuan🎉 」\n\n${text}`
+                      let txt = `「 ARSH AKTIF🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -1915,7 +1839,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 Pemberitahuan 🎉」\n\n${text}`
+                      let txt = `「 ARHS AKTIF 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('Broadcast Success')
@@ -2372,9 +2296,14 @@ case 'webtonsearch': case 'webtoon':
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
             }
             break
+	    case 'ahegao': case 'ass': case 'bdsm': case 'blowjob': case 'cuckold': case 'cum': case 'femdom': case 'foot': case 'glasses': case 'hentaigif' : case 'manga' : case 'masturbation' : case 'orgy' : case 'mobilewall' : case 'netorare' : case 'panties' : case 'pussy' : case 'tentacles' : {
+                reply(mess.wait)
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/morensfw/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
+            }
+            break
 	    case 'yuri': case 'tomori': case 'rem': case 'nishimiya': case 'nezuko': case 'natsukawa': case 'miku': case 'mikasa': case 'kurumi': case 'kuriyama' : case 'emilia' : case 'elaina' : {
                 reply(mess.wait)
-                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/v2/'+command, {}, 'apikey') }, caption: 'Mencarikan Foto Random ' + command }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/randomanime/v2/'+command, {}, 'apikey') }, caption: 'Buat si horny nih foto random ' + command }, { quoted: m })
             }
             break
 	    case 'cosplay': case 'darkjoke': {
@@ -2462,7 +2391,7 @@ case 'webtonsearch': case 'webtoon':
                     {buttonId: `motivasi`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
                 ]
                 let buttonMessage = {
-                    text: anu.result.message,
+                    text: `'${result.command}', ${result.up_at}`,
                     footer: 'Press The Button Below',
                     buttons: buttons,
                     headerType: 2
@@ -2849,7 +2778,7 @@ case 'webtonsearch': case 'webtoon':
                 if (!text) return reply(`No Query Url!`)
                 reply(mess.wait)
                 if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
-                    let anu = await fetchJson(api('zenz', '/downloader/instagram', { url: isUrl(text)[0] }, 'apikey'))
+                    let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url: isUrl(text)[0] }, 'apikey'))
                     for (let media of anu.data) GojoMdNx.sendMedia(m.chat, media, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
                 } else if (/\/stories\/([^\s&]+)/.test(isUrl(text)[0])) {
                     let anu = await fetchJson(api('zenz', '/downloader/instastory', { url: isUrl(text)[0] }, 'apikey'))
@@ -2862,7 +2791,7 @@ case 'webtonsearch': case 'webtoon':
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 
-                let anu = await fetchJson(api('zenz', '/downloader/instagram', { url:text }, 'apikey'))
+                let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url:text }, 'apikey'))
                 GojoMdNx.sendMessage(m.chat, { video: { url: anu.data[0] } }, { quoted: m })
             }
             break
@@ -3059,66 +2988,6 @@ ${id}`)
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
 		reply(txt)
 		}
-		break
-	case 'nhentai' : case 'nh' :
- 		try {
-           		 let fetch = await fetchUrl(global.api("zenz", "/animeweb/nhentai", { query: text }, "apikey"))
-           		 let caption = `Nhentai Search :\n\n`
-            		 let i = fetch.result
-            		 caption += `⭔ ID : ${i.id}\n`
-           		 caption += `⭔ English Title : ${i.title.english ?? ""}\n`
-           		 caption += `⭔ Japanese Title : ${i.title.japanese ?? ""}\n`
-           		 caption += `⭔ Pretty Title : ${i.title.pretty ?? ""}\n`
-            		 caption += `⭔ Image Length : ${i.image.length}\n`
-          		 let buttons = [
-                	     {buttonId: `nhpdf ${text}`, buttonText: { displayText: 'Download PDF'}, type: 1 },
-            		 ]
-            		 let buttonMessage = {
-                	 image: { url: i.image[0] },
-                	 caption: caption,
-                	 footer: config.footer,
-                	 buttons: buttons,
-                	 headerType: 4
-           		 }
-            		 GojoMdNx.sendMessage(m.from, buttonMessage, { quoted: m })
-        	     } catch {
-            	         global.mess("error", m)
-     		     }
-   		 }
-   		 isQuery: true
-	    }
-	break
-	case 'nhpdf' :
-	try {
-	let count = 0
-        let pages = []
-        const get_result = await fetchUrl(global.api("zenz", "/animeweb/nhentai", { query: text }, "apikey"))
-        const doujin = await get_result.result
-        const array_page = doujin.image
-        const titles = doujin.title.pretty
-        const title = titles.replace(/\s+/g, '')
-        m.reply('Downloading...')
-        for (let index = 0; index < array_page.length; index++) {
-            const image_name = "temp/" + title + index + ".png"
-            await new Promise((resolve) => request(array_page[index]).pipe(fs.createWriteStream(image_name)).on('finish', resolve))
-            count++
-            pages.push(image_name);
-        }
-        await new Promise((resolve) =>
-            topdf(pages, 'A4')
-            .pipe(fs.createWriteStream('temp/' + title + '.pdf'))
-            .on('finish', resolve)
-        )
-        for (let index = 0; index < array_page.length; index++) {
-            fs.unlink("temp/" + title + index + ".png", (err) => {
-                if (err) throw err
-            })
-        }
-        GojoMdNx.sendFile(m.from, fs.readFileSync('temp/' + title + '.pdf'), `${title}.pdf`, m, { asDocument: true, thumbnail: doujin.image[0] })
-        fs.unlinkSync('temp/' + title + '.pdf');
-    }
-    isQuery: true
-}
 		break
 		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'squirrel':
                 try {
@@ -3777,7 +3646,6 @@ case 'allmenu': {
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
-┃╠${prefix}nhpdf [url]
 ┃╠${prefix}instagramx [url]
 ┃╠${prefix}tiktokd [url]
 ┃╠${prefix}twitdlx [url]
@@ -3793,7 +3661,6 @@ case 'allmenu': {
 ┃╠${prefix}yts [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
-┃╠${prefix}nhentai [query]
 ┃╠${prefix}pinterest [query]
 ┃╠${prefix}wallpaper [query]
 ┃╠${prefix}wikimedia [query]
@@ -3813,11 +3680,31 @@ case 'allmenu': {
 ┃╠${prefix}cersex
 ┃╠${prefix}creepyfact
 ┃╠${prefix}faktaunik
-┃╠═✪「 RANDOM ANIME 」☯︎
+┃╠══✪「 RANDOM NSFW 」☯︎
 ┃╠${prefix}trap [nsfw]
 ┃╠${prefix}waifus [nsfw]
 ┃╠${prefix}nekos [nsfw]
 ┃╠${prefix}ecchi [nsfw]
+┃╠${prefix}ahegao [nsfw]
+┃╠${prefix}ass [nsfw]
+┃╠${prefix}bdsm [nsfw]
+┃╠${prefix}blowjob [nsfw]
+┃╠${prefix}cuckold [nsfw]
+┃╠${prefix}cum [nsfw]
+┃╠${prefix}femdom [nsfw]
+┃╠${prefix}foot [nsfw]
+┃╠${prefix}glasses [nsfw]
+┃╠${prefix}hentaigif [nsfw]
+┃╠${prefix}manga [nsfw]
+┃╠${prefix}masturbation [nsfw]
+┃╠${prefix}orgy [nsfw]
+┃╠${prefix}mobilewall [nsfw]
+┃╠${prefix}netorare [nsfw]
+┃╠${prefix}panties [nsfw]
+┃╠${prefix}pussy [nsfw]
+┃╠${prefix}tentacles [nsfw]
+┃╠${prefix}yuri [nsfw]
+┃╠═✪「 RANDOM ANIME 」☯︎
 ┃╠${prefix}waifu
 ┃╠${prefix}neko
 ┃╠${prefix}megumin
@@ -3841,7 +3728,6 @@ case 'allmenu': {
 ┃╠${prefix}nezuko
 ┃╠${prefix}rem
 ┃╠${prefix}tomori
-┃╠${prefix}yuri
 ┃╠${prefix}loli
 ┃╠${prefix}bully
 ┃╠${prefix}cuddle
@@ -3916,9 +3802,9 @@ case 'allmenu': {
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
-┃╠ ${prefix}siapakah
-┃╠ ${prefix}tekateki
-┃╠ ${prefix}asahotak
+┃╠ ${prefix}guess blank
+┃╠ ${prefix}guess sentence
+┃╠ ${prefix}guess word
 ┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
@@ -4143,9 +4029,9 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠ ${prefix}cunt
 ┃╠ ${prefix}wibu
 ┃╠ ${prefix}tictactoe
-┃╠ ${prefix}siapakah
-┃╠ ${prefix}tekateki
-┃╠ ${prefix}asahotak
+┃╠ ${prefix}guess blank
+┃╠ ${prefix}guess word
+┃╠ ${prefix}guess sentence
 ┃╠ ${prefix}family100
 ┃╠ ${prefix}delttt
 ┃╠ ${prefix}guess [option]
@@ -4195,7 +4081,6 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}umma [query]
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
-┃╠${prefix}nhpdf [url]
 ┃╠${prefix}instagramx [url]
 ┃╠${prefix}tiktokd [url]
 ┃╠${prefix}twitdlx [url]
@@ -4218,7 +4103,6 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠${prefix}yts [query]
 ┃╠${prefix}google [query]
 ┃╠${prefix}gimage [query]
-┃╠${prefix}nhentai [query]
 ┃╠${prefix}pinterest [query]
 ┃╠${prefix}wallpaper [query]
 ┃╠${prefix}wikimedia [query]
