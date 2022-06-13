@@ -359,7 +359,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
                 jawaban = tekateki[m.sender.split('@')[0]]
                 if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'tekateki', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+                    await GojoMdNx.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Luminous TL', buttons:[{ buttonId:'tekateki', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
                     delete tekateki[m.sender.split('@')[0]]
                 } else m.reply('*Jawaban Salah!*')
 		
@@ -3080,7 +3080,7 @@ ${id}`)
                 	 buttons: buttons,
                 	 headerType: 4
            		 }
-            		 killua.sendMessage(m.from, buttonMessage, { quoted: m })
+            		 GojoMdNx.sendMessage(m.from, buttonMessage, { quoted: m })
         	     } catch {
             	         global.mess("error", m)
      		     }
